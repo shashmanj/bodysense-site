@@ -7,7 +7,7 @@ const BASE = import.meta.env.BASE_URL
 const SCREENS = [
   {
     src: `${BASE}screen-1.png`,
-    glow: 'bg-emerald-500/30',
+    glow: 'bg-emerald-400/25',
     rotateY: 20,
     z: 0,
     baseY: 12,
@@ -18,7 +18,7 @@ const SCREENS = [
   },
   {
     src: `${BASE}screen-2.png`,
-    glow: 'bg-amber-500/25',
+    glow: 'bg-amber-400/25',
     rotateY: 0,
     z: 90,
     baseY: -28,
@@ -29,7 +29,7 @@ const SCREENS = [
   },
   {
     src: `${BASE}screen-3.png`,
-    glow: 'bg-sky-500/30',
+    glow: 'bg-sky-400/25',
     rotateY: -20,
     z: 0,
     baseY: 12,
@@ -113,20 +113,20 @@ export function AppShowcase() {
 
   return (
     <section ref={sectionRef} id="app" className="relative isolate overflow-hidden px-6 py-32 md:py-44">
-      {/* clean dark stage so the screens own the frame */}
-      <div aria-hidden="true" className="absolute inset-0 z-0 bg-black" />
+      {/* clean light stage with soft, calm colour blooms */}
+      <div aria-hidden="true" className="absolute inset-0 z-0 bg-[#f4f1ea]" />
       <div aria-hidden="true" className="absolute inset-0 z-0">
-        <div className="absolute left-[14%] top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-emerald-500/15 blur-[130px]" />
-        <div className="absolute left-1/2 top-[46%] h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-500/12 blur-[150px]" />
-        <div className="absolute right-[14%] top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-sky-500/15 blur-[130px]" />
+        <div className="absolute left-[14%] top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-emerald-300/25 blur-[150px]" />
+        <div className="absolute left-1/2 top-[46%] h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-200/30 blur-[160px]" />
+        <div className="absolute right-[14%] top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-sky-300/25 blur-[150px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-3xl text-center">
-        <p className="text-[11px] uppercase tracking-[0.22em] text-white/50">Your body, understood</p>
-        <h2 className="mt-4 font-inter text-4xl font-medium tracking-[-0.02em] md:text-6xl">
+        <p className="text-[11px] uppercase tracking-[0.22em] text-[#1f1d1a]/45">Your body, understood</p>
+        <h2 className="mt-4 font-inter text-4xl font-medium tracking-[-0.02em] text-[#1f1d1a] md:text-6xl">
           See it in your day.
         </h2>
-        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-white/60">
+        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-[#1f1d1a]/60">
           BodySense AI turns your real signals into small, doable actions — so understanding your body
           becomes living better, every single day.
         </p>
@@ -150,23 +150,18 @@ export function AppShowcase() {
               }}
             >
               <div ref={(el) => { phoneRefs.current[i] = el }} className="relative">
-                {/* colored glow halo */}
+                {/* soft colour glow halo */}
                 <div
                   aria-hidden="true"
                   className={cn('absolute -inset-8 rounded-[3rem] blur-[60px]', screen.glow)}
                 />
-                {/* premium glass frame */}
+                {/* light glass frame */}
                 <div className="glass-frame relative rounded-[2.4rem] p-2.5">
                   <img
                     src={screen.src}
                     alt="BodySense AI app screen"
                     loading="lazy"
                     className={cn('rounded-[2rem]', screen.width)}
-                  />
-                  {/* soft top-edge reflection */}
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 rounded-[2.4rem] bg-gradient-to-tr from-white/0 via-white/[0.04] to-white/10"
                   />
                 </div>
               </div>
@@ -179,7 +174,7 @@ export function AppShowcase() {
         {CHIPS.map((chip) => (
           <span
             key={chip}
-            className="liquid-glass rounded-full px-4 py-2 text-[11px] tracking-[0.1em] text-white/80"
+            className="liquid-glass rounded-full px-4 py-2 text-[11px] tracking-[0.1em] text-[#1f1d1a]/70"
           >
             {chip}
           </span>

@@ -6,7 +6,7 @@ import { Footer } from '@/components/Footer'
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-black text-white">
+    <div className="relative min-h-screen overflow-x-clip bg-[#f4f1ea] text-[#1f1d1a]">
       <VideoBackground />
       <Navbar />
       <main className="relative z-10">

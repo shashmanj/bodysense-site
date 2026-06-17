@@ -48,7 +48,7 @@ export function VideoBackground() {
   }
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden bg-black">
+    <div className="fixed inset-0 z-0 overflow-hidden bg-[#f4f1ea]">
       {/* static overscan so parallax never reveals an edge */}
       <div className="absolute inset-0 origin-center scale-[1.08]">
         {/* GSAP translates this layer */}
@@ -67,10 +67,10 @@ export function VideoBackground() {
           </video>
         </div>
       </div>
-      {/* cinematic wash for legibility */}
+      {/* soft cream wash — keeps the page light & calm, video reads as gentle texture */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black"
+        className="absolute inset-0 bg-gradient-to-b from-[#f4f1ea]/55 via-[#f4f1ea]/45 to-[#f4f1ea]"
       />
     </div>
   )

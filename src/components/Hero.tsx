@@ -21,8 +21,8 @@ export function Hero() {
           className="font-inter font-normal leading-[1.1] tracking-[-0.02em]"
           style={{ fontSize: 'clamp(40px, 5.4vw, 72px)' }}
         >
-          <span className="block text-white">Understand your body.</span>
-          <span className="block text-white/55">Live your way.</span>
+          <span className="block text-[#1f1d1a]">Understand your body.</span>
+          <span className="block text-[#1f1d1a]/45">Live your way.</span>
         </h1>
       </div>
 
@@ -33,22 +33,22 @@ export function Hero() {
           mounted ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
         )}
       >
-        <p className="max-w-[620px] text-[15px] leading-relaxed text-white">
+        <p className="max-w-[620px] text-[15px] leading-relaxed text-[#1f1d1a]">
           BodySense AI reads your real signals — glucose, blood pressure, HRV, sleep — and turns them
           into simple daily guidance.
-          <span className="text-white/55"> Tailored to your body, grounded in NHS NICE.</span>
+          <span className="text-[#1f1d1a]/55"> Tailored to your body, grounded in NHS NICE.</span>
         </p>
 
         <a
           href="https://bodysenseai.co.uk"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-white px-8 py-3.5 text-[15px] font-medium text-black transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_32px_4px_rgba(255,255,255,0.2)] active:scale-[0.97]"
+          className="rounded-full bg-[#1f1d1a] px-8 py-3.5 text-[15px] font-medium text-[#f4f1ea] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_18px_44px_-16px_rgba(31,29,26,0.55)] active:scale-[0.97]"
         >
           Join the TestFlight
         </a>
 
-        <div className="flex items-center gap-2 text-white/70">
+        <div className="flex items-center gap-2 text-[#1f1d1a]/55">
           <Lock size={13} strokeWidth={1.5} />
           <span className="text-[11px] font-medium tracking-[0.14em]">
             PRIVATE BY DESIGN. ON-DEVICE FIRST.
